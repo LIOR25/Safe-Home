@@ -20,6 +20,7 @@ export class WebcamComponent implements OnInit {
   }
   ngOnInit() {}
 
+  
   public ngAfterViewInit() {
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
