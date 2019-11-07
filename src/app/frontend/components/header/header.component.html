@@ -1,0 +1,18 @@
+<p>header works!</p>
+
+<div class="ui fixed menu">
+  <a routerLink="/home" class="active item">
+    Home
+  </a>
+  <a routerLink="resident" class="item">
+    Resident
+  </a>
+  <div class="right menu">
+    <a *ngIf="!isLogged" routerLink="signup" class="item">
+      Signup
+    </a>
+    <!-- <a *ngIf="isLogged" (click)="onLogout()" class="ui item"> -->
+      Logout
+    <!-- </a> -->
+  </div>
+</div>
