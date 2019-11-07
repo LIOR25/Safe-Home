@@ -4,3 +4,6 @@ h1
 }
 
 
+.border {
+  border-right: 1px solid #ccc;
+}
