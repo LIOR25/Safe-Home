@@ -27,6 +27,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     AppComponent,
     HeaderComponent,
     HomePageComponent,
+
     WebcamComponent,
     TableComponent,
     NavigationComponent,
