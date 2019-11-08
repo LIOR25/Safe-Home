@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-webcam',
@@ -20,7 +20,7 @@ export class WebcamComponent implements OnInit {
   }
   ngOnInit() {}
 
-  
+
   public ngAfterViewInit() {
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
@@ -31,10 +31,23 @@ export class WebcamComponent implements OnInit {
   }
 
   public capture() {
+
      let context = this.canvas.nativeElement
       .getContext('2d')
       .drawImage(this.video.nativeElement, 0, 0, 640, 480);
     this.captures.push(this.canvas.nativeElement.toDataURL('image/png'));
+
+  }
+
+  public check(){
+     Swal.fire({
+       title: 'Error!',
+       text: 'This is not a Resident',
+      //  type: 'error',
+       confirmButtonText: 'ok'
+     });
+    console.log('hey');
+
   }
 }
 

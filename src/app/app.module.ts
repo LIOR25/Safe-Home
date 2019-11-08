@@ -18,6 +18,9 @@ import { MobileCameraService } from './frontend/services/mobile-camera.service';
 import { FaceRecognitionService } from './frontend/services/face-recognition.service';
 import { PlatformInformationProvider } from './frontend/services/plaform-information.provider';
 import { AbstractCameraService, cameraFactory } from './frontend/services/abstract-camera.service';
+import { CameraTestComponent } from './frontend/pages/camera-test/camera-test.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
 
 @NgModule({
   declarations: [
@@ -28,9 +31,16 @@ import { AbstractCameraService, cameraFactory } from './frontend/services/abstra
     TableComponent,
     NavigationComponent,
     ContentComponent,
-    BoolToYesNoPipe
+    BoolToYesNoPipe,
+    CameraTestComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    [SweetAlert2Module.forRoot()]
+  ],
   providers: [
     DesktopCameraService,
     MobileCameraService,
