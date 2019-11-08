@@ -18,17 +18,22 @@ import { MobileCameraService } from './frontend/services/mobile-camera.service';
 import { FaceRecognitionService } from './frontend/services/face-recognition.service';
 import { PlatformInformationProvider } from './frontend/services/plaform-information.provider';
 import { AbstractCameraService, cameraFactory } from './frontend/services/abstract-camera.service';
+import { ResidentComponent  } from './frontend/pages/resident/resident.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomePageComponent,
+
     WebcamComponent,
     TableComponent,
     NavigationComponent,
     ContentComponent,
     BoolToYesNoPipe
+
+    ResidentComponent 
+
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [
